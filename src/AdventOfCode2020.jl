@@ -1,5 +1,9 @@
 module AdventOfCode2020
 
-# Write your package code here.
+@info "Advent of Code 2020, Dan Burns"
+@info ""
+
+@info "Loading Day 1"
+include("day_01.jl")
 
 end
