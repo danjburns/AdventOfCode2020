@@ -1,15 +1,26 @@
-# expore functions needed for tests
-export fuel, fuel_recurs
+# export functions needed for tests
+export sum_two_to_2020, sum_three_to_2020
 
 # Part 1
-fuel(x) = round(x/3, RoundDown) - 2
-masses = readlines("input/day01.txt") .|> x->parse(Int, x) 
-@info "Day 1, Part 1 answer: $(sum(fuel.(masses)))"
+ex1 = [1721, 979, 366, 299, 675, 1456]
 
+function sum_two_to_2020(input)
+    for a in 1:length(input)-1, b in 1:a
+        input[a] + input[b] == 2020 && return input[a] * input[b] 
+    end
+end
+
+@assert sum_two_to_2020(ex1) == 514579
+input = readlines("input/day01.txt") .|> x->parse(Int, x) 
+@info "Day 1, Part 1 answer: $(sum_two_to_2020(input))"
 
 # Part 2
-function fuel_recurs(mass)
-    fuel_mass = fuel(mass)
-    fuel_mass < 0 ? 0 : fuel_mass + fuel_recurs(fuel_mass)
+function sum_three_to_2020(input)
+    local i = 0
+    for a in 1:length(input)-1, b in 1:(a-1), c in 1:b
+        input[a] + input[b] + input[c] == 2020 && return input[a]*input[b]*input[c]
+    end
 end
-@info "Day 1, Part 2 answer: $(sum(fuel_recurs.(masses)))"
+
+@assert sum_three_to_2020(ex1) == 241861950
+@info "Day 1, Part 2 answer: $(sum_three_to_2020(input))"
