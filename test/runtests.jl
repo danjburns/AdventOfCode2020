@@ -27,7 +27,7 @@ end
     @testset "Day 2, Puzzle tests (post hoc)" begin
     day02_input = read("../input/day02.txt", String) |> x->String.(split(x, "\n"))
     @test count_valids(day02_input) == 416
-    @test_broken count_valids_p2(day02_input) == 688
+    @test count_valids_p2(day02_input) == 688
     end
 end
 
