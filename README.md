@@ -9,7 +9,7 @@ julia> include("src/day_01.jl")
 [ Info: Day 1, Part 2 answer: yyy
 ```
 
-Run tests with:
+Run tests from package manager with `test`:
 ```julia
-julia> include("test/run_tests.jl")
+(AdventOfCode2020) pkg> test
 ```

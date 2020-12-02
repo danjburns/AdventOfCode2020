@@ -6,4 +6,8 @@ module AdventOfCode2020
 @info "Loading Day 1"
 include("day_01.jl")
 
+@info "Loading Day 2"
+include("day_02.jl")
+
+
 end
