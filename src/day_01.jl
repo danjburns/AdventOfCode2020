@@ -11,7 +11,7 @@ function sum_two_to_2020(input)
 end
 
 @assert sum_two_to_2020(ex1) == 514579
-input = readlines("input/day01.txt") .|> x->parse(Int, x) 
+input = readlines("../input/day01.txt") .|> x->parse(Int, x) 
 @info "Day 1, Part 1 answer: $(sum_two_to_2020(input))"
 
 # Part 2
