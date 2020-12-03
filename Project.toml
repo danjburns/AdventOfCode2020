@@ -9,6 +9,7 @@ DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 
 [compat]
+DataStructures = "0.18"
 julia = "1"
 
 [extras]
