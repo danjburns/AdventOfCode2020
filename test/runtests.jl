@@ -52,3 +52,17 @@ using AdventOfCode2020:day04
         @test day04.count_valid_pp(day04.input)[2] == 123
     end
 end
+
+using AdventOfCode2020:day05
+@testset "Day 5" begin
+    @testset "Day 5, Unit tests" begin
+        @test day05.parse_bp("BFFFBBFRRR") == 567
+        @test day05.parse_bp("FFFBBBFRRR") == 119
+        @test day05.parse_bp("BBFFBBFRLL") == 820
+    end
+
+    @testset "Day 5, Puzzle tests (post hoc)" begin
+        @test day05.highest_id() == 922
+        @test day05.find_seat()[1] == 747
+    end
+end
