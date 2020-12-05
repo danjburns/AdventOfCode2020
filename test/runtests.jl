@@ -1,40 +1,54 @@
 using Test, AdventOfCode2020
 
+using AdventOfCode2020:day01
 @testset "Day 1" begin
     @testset "Day 1, Unit tests" begin
-        day01_ex1 = [1721, 979, 366, 299, 675, 1456]
-        @test sum_two_to_2020(day01_ex1) == 514579
-        @test sum_three_to_2020(day01_ex1) == 241861950
+        @test day01.sum_two_to_2020(day01.ex) == 514579
+        @test day01.sum_three_to_2020(day01.ex) == 241861950
     end
 
     @testset "Day 1, Puzzle tests (post hoc)" begin
-        day01_input = readlines("../input/day01.txt") .|> x->parse(Int, x)
-        @test sum_two_to_2020(day01_input) == 996996
-        @test sum_three_to_2020(day01_input) == 9210402
+        @test day01.sum_two_to_2020(day01.input) == 996996
+        @test day01.sum_three_to_2020(day01.input) == 9210402
     end
 end
 
+using AdventOfCode2020:day02
 @testset "Day 2" begin
     @testset "Day 2, Unit tests" begin
-        day02_ex1 = 
-        """1-3 a: abcde
-        1-3 b: cdefg
-        2-9 c: ccccccccc""" |> x->String.(split(x, "\n"))
-        @test count_valids(day02_ex1) == 2
-        @test count_valids_p2(day02_ex1) == 1
+        @test day02.count_valids(day02.ex) == 2
+        @test day02.count_valids_p2(day02.ex) == 1
     end
 
     @testset "Day 2, Puzzle tests (post hoc)" begin
-        day02_input = read("../input/day02.txt", String) |> x->String.(split(x, "\n"))
-        @test count_valids(day02_input) == 416
-        @test count_valids_p2(day02_input) == 688
+        @test day02.count_valids(day02.input) == 416
+        @test day02.count_valids_p2(day02.input) == 688
     end
 end
 
+using AdventOfCode2020:day03
 @testset "Day 3" begin
+    @testset "Day 3, Unit tests" begin
+        @test day03.count_trees(day03.ex) == 7
+        @test day03.assess_slopes(day03.ex) == 336
+    end
+
     @testset "Day 3, Puzzle tests (post hoc)" begin
-        day03_input = read("../input/day03.txt", String)
-        @test count_trees(day03_input) == 189
-        @test assess_slopes(day03_input) == 1718180100
+        @test day03.count_trees(day03.input) == 189
+        @test day03.assess_slopes(day03.input) == 1718180100
+    end
+end
+
+using AdventOfCode2020:day04
+@testset "Day 4" begin
+    @testset "Day 4, Unit tests" begin
+        @test day04.count_valid_pp(day04.ex)[1] == 2
+        @test day04.count_valid_pp(day04.invalid)[2] == 0
+        @test day04.count_valid_pp(day04.valid)[2] == 4
+    end
+
+    @testset "Day 4, Puzzle tests (post hoc)" begin
+        @test day04.count_valid_pp(day04.input)[1] == 206
+        @test day04.count_valid_pp(day04.input)[2] == 123
     end
 end
