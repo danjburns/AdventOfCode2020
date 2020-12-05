@@ -1,11 +1,10 @@
+module day03
 using Pipe: @pipe
 using CircularArrays
 
-export count_trees, assess_slopes
-
 input = read("../input/day03.txt", String);
 
-ex1 = """..##.......
+ex = """..##.......
 #...#...#..
 .#....#..#.
 ..#.#...#.#
@@ -39,7 +38,7 @@ function count_trees(input, slope=(3,1))
     return count
 end
 
-@assert count_trees(ex1) == 7
+@assert count_trees(ex) == 7
 @info "Day 3, Part 1 answer: $(count_trees(input))"
 
 # Part 2
@@ -49,5 +48,7 @@ function assess_slopes(input)
     return reduce(*, counts)
 end
 
-@assert assess_slopes(ex1) == 336
+@assert assess_slopes(ex) == 336
 @info "Day 3, Part 2 answer: $(assess_slopes(input))"
+
+end

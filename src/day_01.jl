@@ -1,8 +1,7 @@
-# export functions needed for tests
-export sum_two_to_2020, sum_three_to_2020
+module day01
 
 # Part 1
-ex1 = [1721, 979, 366, 299, 675, 1456]
+ex = [1721, 979, 366, 299, 675, 1456]
 
 function sum_two_to_2020(input)
     for a in 1:length(input)-1, b in 1:a
@@ -10,7 +9,7 @@ function sum_two_to_2020(input)
     end
 end
 
-@assert sum_two_to_2020(ex1) == 514579
+@assert sum_two_to_2020(ex) == 514579
 input = readlines("../input/day01.txt") .|> x->parse(Int, x) 
 @info "Day 1, Part 1 answer: $(sum_two_to_2020(input))"
 
@@ -22,5 +21,7 @@ function sum_three_to_2020(input)
     end
 end
 
-@assert sum_three_to_2020(ex1) == 241861950
+@assert sum_three_to_2020(ex) == 241861950
 @info "Day 1, Part 2 answer: $(sum_three_to_2020(input))"
+
+end
