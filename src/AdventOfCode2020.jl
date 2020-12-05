@@ -9,5 +9,7 @@ include("day_01.jl")
 @info "Loading Day 2"
 include("day_02.jl")
 
+@info "Loading Day 3"
+include("day_03.jl")
 
 end

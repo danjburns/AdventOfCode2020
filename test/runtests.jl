@@ -25,10 +25,16 @@ end
     end
 
     @testset "Day 2, Puzzle tests (post hoc)" begin
-    day02_input = read("../input/day02.txt", String) |> x->String.(split(x, "\n"))
-    @test count_valids(day02_input) == 416
-    @test count_valids_p2(day02_input) == 688
+        day02_input = read("../input/day02.txt", String) |> x->String.(split(x, "\n"))
+        @test count_valids(day02_input) == 416
+        @test count_valids_p2(day02_input) == 688
     end
 end
 
-
+@testset "Day 3" begin
+    @testset "Day 3, Puzzle tests (post hoc)" begin
+        day03_input = read("../input/day03.txt", String)
+        @test count_trees(day03_input) == 189
+        @test assess_slopes(day03_input) == 1718180100
+    end
+end
