@@ -11,6 +11,7 @@ Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 Underscores = "d9a01c3f-67ce-4d8c-9b55-35f6e4050bb1"
 
 [compat]
+Underscores = "2.0"
 julia = "1"
 
 [extras]
