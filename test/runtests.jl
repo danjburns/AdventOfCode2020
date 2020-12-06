@@ -70,11 +70,13 @@ end
 using AdventOfCode2020:day06
 @testset "Day 6" begin
     @testset "Day 6, Unit tests" begin
-        @test day06.count_yesses(day06.ex1) == 6
-        @test day06.count_yesses(day06.ex2) == 11
+        @test day06.count_yesses(day06.ex1)[1] == 6
+        @test day06.count_yesses(day06.ex2)[1] == 11
+        @test day06.count_yesses(day06.ex2)[2] == 6
     end
 
     @testset "Day 6, Puzzle tests (post hoc)" begin
-        @test day06.count_yesses(day06.input) == 6506
+        @test day06.count_yesses(day06.input)[1] == 6506
+        @test day06.count_yesses(day06.input)[2] == 3243
     end
 end
