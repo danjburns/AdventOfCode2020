@@ -66,3 +66,15 @@ using AdventOfCode2020:day05
         @test day05.find_seat()[1] == 747
     end
 end
+
+using AdventOfCode2020:day06
+@testset "Day 6" begin
+    @testset "Day 6, Unit tests" begin
+        @test day06.count_yesses(day06.ex1) == 6
+        @test day06.count_yesses(day06.ex2) == 11
+    end
+
+    @testset "Day 6, Puzzle tests (post hoc)" begin
+        @test day06.count_yesses(day06.input) == 6506
+    end
+end
