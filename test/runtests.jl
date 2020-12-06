@@ -1,4 +1,6 @@
-using Test, AdventOfCode2020
+using Test, AdventOfCode2020, Pkg
+
+# no need to change pwd for running tests
 
 using AdventOfCode2020:day01
 @testset "Day 1" begin
@@ -62,8 +64,8 @@ using AdventOfCode2020:day05
     end
 
     @testset "Day 5, Puzzle tests (post hoc)" begin
-        @test day05.highest_id() == 922
-        @test day05.find_seat()[1] == 747
+        @test day05.highest_id(day05.input) == 922
+        @test day05.find_seat(day05.input)[1] == 747
     end
 end
 

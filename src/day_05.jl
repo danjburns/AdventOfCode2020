@@ -1,7 +1,7 @@
 module day05 
 
 include("inputs.jl")
-input() = inputs.input_d5()
+input = inputs.input_d5()
 
 lookup = Dict('B'=>'1', 'F'=>'0', 'R'=>'1', 'L'=>'0')
 
@@ -17,19 +17,20 @@ end
 @assert parse_bp("BBFFBBFRLL") == 820
 
 # Part 1
-function highest_id(;input=input()) 
+function highest_id(input) 
     seat_ids = parse_bp.(input)
     return maximum(seat_ids)
 end
-@info "Day 5, Part 1 answer: $(highest_id())"
+@info "Day 5, Part 1 answer: $(highest_id(input))"
 
 #Part 2
-function find_seat(;input=input())
+# function find_seat(;input=input())
+function find_seat(input)
     seat_ids = parse_bp.(input)
     lo = minimum(seat_ids)
     hi = maximum(seat_ids)
     return [x for x in lo:hi if x ∉ seat_ids]
 end
-@info "Day 5, Part 2 answer: $(find_seat()[1])"
+@info "Day 5, Part 2 answer: $(find_seat(input)[1])"
 
 end

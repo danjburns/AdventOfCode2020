@@ -1,14 +1,17 @@
 module inputs
 
-# TODO: figure out a way to make loading inputs lazy. Functions?
-
+using Pkg
 using Pipe: @pipe
+
+cd(dirname(@__DIR__)) # move pwd up one level from this file
+@info "The PWD for inputs module is: $(pwd())"
+@info "The __DIR__ inputs module is: $(@__DIR__)"
 
 ################
 #    Day 1
 ################
 ex_d1() = [1721, 979, 366, 299, 675, 1456]
-input_d1() = readlines("../input/day01.txt") .|> x->parse(Int, x)
+input_d1() = readlines("input/day01.txt") .|> x->parse(Int, x)
 
 ################
 #    Day 2
@@ -16,7 +19,7 @@ input_d1() = readlines("../input/day01.txt") .|> x->parse(Int, x)
 ex_d2() = @pipe "1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc" |> String.(split(_, "\n"))
-input_d2() = @pipe read("../input/day02.txt", String) |> String.(split(_, "\n"))
+input_d2() = @pipe read("input/day02.txt", String) |> String.(split(_, "\n"))
 
 ################
 #    Day 3
@@ -32,7 +35,7 @@ ex_d3() = """..##.......
 #.##...#...
 #...##....#
 .#..#...#.#""" 
-input_d3() = read("../input/day03.txt", String);
+input_d3() = read("input/day03.txt", String);
 
 ################
 #    Day 4
@@ -55,7 +58,7 @@ ex_d4() = @pipe String.(split(raw_ex_d4, "\n")) |> # equiv to output of readline
             split(_, "\n\n") |> 
             split.(_, r"\s+")
 
-input_d4() = @pipe readlines("../input/day04.txt") |> 
+input_d4() = @pipe readlines("input/day04.txt") |> 
             join(_, "\n") |> 
             split(_, "\n\n") |> 
             split.(_, r"\s+")
@@ -97,7 +100,7 @@ valid_d4() = @pipe String.(split(valid_raw, "\n")) |> # equiv to output of readl
 ################
 #    Day 5
 ################
-input_d5() = readlines("../input/day05.txt")
+input_d5() = readlines("input/day05.txt")
 
 ################
 #    Day 6
@@ -120,7 +123,7 @@ a
 a
 
 b""" |> String.(split(_, "\n")) |> join(_, "\n") |> split(_, "\n\n") |> split.(_, r"\s+")
-input_d6() = @pipe readlines("../input/day06.txt") |> join(_,"\n") |> split(_, "\n\n") |> split.(_, r"\s+")
+input_d6() = @pipe readlines("input/day06.txt") |> join(_,"\n") |> split(_, "\n\n") |> split.(_, r"\s+")
 
 
 
