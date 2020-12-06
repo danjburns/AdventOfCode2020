@@ -1,6 +1,8 @@
 module day05 
 
-input() = readlines("../input/day05.txt")
+include("inputs.jl")
+input() = inputs.input_d5()
+
 lookup = Dict('B'=>'1', 'F'=>'0', 'R'=>'1', 'L'=>'0')
 
 function parse_bp(bp)

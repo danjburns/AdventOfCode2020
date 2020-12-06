@@ -2,20 +2,16 @@ module day02
 using Pipe: @pipe
 using DataStructures
 
+include("inputs.jl")
+ex = inputs.ex_d2 # Lines are pairs of policy & passwords
+input = inputs.input_d2
+
 struct pol_pw
     min::Int
     max::Int
     letter::Char
     password::String
 end
-
-# Lines are pairs of policy & passwords
-ex = 
-@pipe "1-3 a: abcde
-1-3 b: cdefg
-2-9 c: ccccccccc" |> String.(split(_, "\n"))
-
-input = @pipe read("../input/day02.txt", String) |> String.(split(_, "\n"))
 
 # Part 1
 function parse_line(line)

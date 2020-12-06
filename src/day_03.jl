@@ -1,20 +1,9 @@
 module day03
-using Pipe: @pipe
 using CircularArrays
 
-input = read("../input/day03.txt", String);
-
-ex = """..##.......
-#...#...#..
-.#....#..#.
-..#.#...#.#
-.#...##..#.
-..#.##.....
-.#.#.#....#
-.#........#
-#.##...#...
-#...##....#
-.#..#...#.#""" 
+include("inputs.jl")
+ex = inputs.ex_d3
+input = inputs.input_d3
 
 # Part 1
 function parsemap(input)

@@ -1,8 +1,10 @@
 module day01
 
-# Part 1
-ex = [1721, 979, 366, 299, 675, 1456]
+include("inputs.jl")
+ex = inputs.ex_d1
+input = inputs.input_d1
 
+# Part 1
 function sum_two_to_2020(input)
     for a in 1:length(input)-1, b in 1:a
         input[a] + input[b] == 2020 && return input[a] * input[b] 
@@ -10,7 +12,6 @@ function sum_two_to_2020(input)
 end
 
 @assert sum_two_to_2020(ex) == 514579
-input = readlines("../input/day01.txt") .|> x->parse(Int, x) 
 @info "Day 1, Part 1 answer: $(sum_two_to_2020(input))"
 
 # Part 2
