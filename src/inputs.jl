@@ -4,8 +4,8 @@ using Pkg
 using Pipe: @pipe
 
 cd(dirname(@__DIR__)) # move pwd up one level from this file
-@info "The PWD for inputs module is: $(pwd())"
-@info "The __DIR__ inputs module is: $(@__DIR__)"
+# @info "The PWD for inputs module is: $(pwd())"
+# @info "The __DIR__ inputs module is: $(@__DIR__)"
 
 ################
 #    Day 1
