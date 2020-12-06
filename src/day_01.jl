@@ -1,8 +1,8 @@
 module day01
 
 include("inputs.jl")
-ex = inputs.ex_d1
-input = inputs.input_d1
+ex = inputs.ex_d1()
+input = inputs.input_d1()
 
 # Part 1
 function sum_two_to_2020(input)

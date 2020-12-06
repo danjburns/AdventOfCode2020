@@ -7,21 +7,21 @@ using Pipe: @pipe
 ################
 #    Day 1
 ################
-ex_d1 = [1721, 979, 366, 299, 675, 1456]
-input_d1 = readlines("../input/day01.txt") .|> x->parse(Int, x)
+ex_d1() = [1721, 979, 366, 299, 675, 1456]
+input_d1() = readlines("../input/day01.txt") .|> x->parse(Int, x)
 
 ################
 #    Day 2
 ################
-ex_d2 = @pipe "1-3 a: abcde
+ex_d2() = @pipe "1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc" |> String.(split(_, "\n"))
-input_d2 = @pipe read("../input/day02.txt", String) |> String.(split(_, "\n"))
+input_d2() = @pipe read("../input/day02.txt", String) |> String.(split(_, "\n"))
 
 ################
 #    Day 3
 ################
-ex_d3 = """..##.......
+ex_d3() = """..##.......
 #...#...#..
 .#....#..#.
 ..#.#...#.#
@@ -32,7 +32,7 @@ ex_d3 = """..##.......
 #.##...#...
 #...##....#
 .#..#...#.#""" 
-input_d3 = read("../input/day03.txt", String);
+input_d3() = read("../input/day03.txt", String);
 
 ################
 #    Day 4
@@ -50,12 +50,12 @@ hgt:179cm
 
 hcl:#cfa07d eyr:2025 pid:166559648
 iyr:2011 ecl:brn hgt:59in"""
-ex_d4 = @pipe String.(split(raw_ex_d4, "\n")) |> # equiv to output of readlines(input.txt)
+ex_d4() = @pipe String.(split(raw_ex_d4, "\n")) |> # equiv to output of readlines(input.txt)
             join(_, "\n") |> 
             split(_, "\n\n") |> 
             split.(_, r"\s+")
 
-input_d4 = @pipe readlines("../input/day04.txt") |> 
+input_d4() = @pipe readlines("../input/day04.txt") |> 
             join(_, "\n") |> 
             split(_, "\n\n") |> 
             split.(_, r"\s+")
@@ -72,7 +72,7 @@ ecl:brn hgt:182cm pid:021572410 eyr:2020 byr:1992 cid:277
 hgt:59cm ecl:zzz
 eyr:2038 hcl:74454a iyr:2023
 pid:3556412378 byr:2007"""
-invalid_d4 = @pipe String.(split(invalid_raw, "\n")) |> # equiv to output of readlines(input.txt)
+invalid_d4() = @pipe String.(split(invalid_raw, "\n")) |> # equiv to output of readlines(input.txt)
             join(_, "\n") |> 
             split(_, "\n\n") |> 
             split.(_, r"\s+")
@@ -89,7 +89,7 @@ pid:545766238 ecl:hzl
 eyr:2022
 
 iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719"""
-valid_d4 = @pipe String.(split(valid_raw, "\n")) |> # equiv to output of readlines(input.txt)
+valid_d4() = @pipe String.(split(valid_raw, "\n")) |> # equiv to output of readlines(input.txt)
             join(_, "\n") |> 
             split(_, "\n\n") |> 
             split.(_, r"\s+")
@@ -102,10 +102,10 @@ input_d5() = readlines("../input/day05.txt")
 ################
 #    Day 6
 ################
-ex1_d6 = @pipe """abcx
+ex1_d6() = @pipe """abcx
 abcy
 abcz""" |> String.(split(_, "\n")) |> join(_, "\n") |> split(_, "\n\n") |> split.(_, r"\s+")
-ex2_d6 = @pipe """abc
+ex2_d6() = @pipe """abc
 
 a
 b
@@ -120,7 +120,7 @@ a
 a
 
 b""" |> String.(split(_, "\n")) |> join(_, "\n") |> split(_, "\n\n") |> split.(_, r"\s+")
-input_d6 = @pipe readlines("../input/day06.txt") |> join(_,"\n") |> split(_, "\n\n") |> split.(_, r"\s+")
+input_d6() = @pipe readlines("../input/day06.txt") |> join(_,"\n") |> split(_, "\n\n") |> split.(_, r"\s+")
 
 
 

@@ -2,11 +2,11 @@ module day03
 using CircularArrays
 
 include("inputs.jl")
-ex = inputs.ex_d3
-input = inputs.input_d3
+ex = inputs.ex_d3()
+input = inputs.input_d3()
 
 # Part 1
-function parsemap(input)
+function parsemap(input::String)
     map = split(input) .|> # array of strings "..##......."
     collect .|> # array of array of chars ['.', '.', '#', '#', ...]
     x->(x .=='#') |> # array of BitArray [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0]

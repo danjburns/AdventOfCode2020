@@ -3,8 +3,8 @@ using Pipe: @pipe
 using DataStructures
 
 include("inputs.jl")
-ex = inputs.ex_d2 # Lines are pairs of policy & passwords
-input = inputs.input_d2
+ex = inputs.ex_d2() # Lines are pairs of policy & passwords
+input = inputs.input_d2()
 
 struct pol_pw
     min::Int

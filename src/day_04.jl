@@ -2,10 +2,10 @@ module day04
 using Pipe: @pipe
 
 include("inputs.jl")
-ex = inputs.ex_d4
-invalid = inputs.invalid_d4
-valid = inputs.valid_d4
-input = inputs.input_d4
+ex = inputs.ex_d4()
+invalid = inputs.invalid_d4()
+valid = inputs.valid_d4()
+input = inputs.input_d4()
 
 function count_valid_pp(input)
     passports = [Dict{String, String}(split.(blob, ":")) for blob in input]
