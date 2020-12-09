@@ -82,3 +82,16 @@ using AdventOfCode2020:day06
         @test day06.count_yesses(day06.input)[2] == 3243
     end
 end
+
+using AdventOfCode2020:day07
+@testset "Day 7" begin
+    @testset "Day 7, Unit tests" begin
+        @test day07.part1(day07.ex) == 4
+        @test day07.part2(day07.ex) == 32
+    end
+
+    @testset "Day 7, Puzzle tests (post hoc)" begin
+        @test day07.part1(day07.input) == 211
+        @test day07.part2(day07.input) == 12414
+    end
+end
