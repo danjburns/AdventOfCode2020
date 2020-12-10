@@ -108,3 +108,16 @@ using AdventOfCode2020:day08
         @test day08.part2(day08.input) == 1688
     end
 end
+
+using AdventOfCode2020:day09
+@testset "Day 9" begin
+    @testset "Day 9, Unit tests" begin
+        @test day09.first_invalid(day09.ex, 5) == 127
+        @test day09.part2(day09.ex, 5) == 62
+    end
+
+    @testset "Day 9, Puzzle tests (post hoc)" begin
+    @test day09.first_invalid(day09.input) == 556543474
+    @test day09.part2(day09.input, 25) == 76096372
+    end
+end

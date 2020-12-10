@@ -155,5 +155,29 @@ acc +6""" |> String.(split(_, "\n"))
 input_d8() = readlines("input/day08.txt")
 
 
+################
+#    Day 9
+################
+ex1_d9() = @pipe """35
+20
+15
+25
+47
+40
+62
+55
+65
+95
+102
+117
+150
+182
+127
+219
+299
+277
+309
+576""" |> String.(split(_, "\n")) |> parse.(Int, _)
+input_d9() = parse.(Int, readlines("input/day09.txt"))
 
 end
