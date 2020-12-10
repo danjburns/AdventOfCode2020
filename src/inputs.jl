@@ -140,4 +140,20 @@ faded blue bags contain no other bags.
 dotted black bags contain no other bags.""" |> String.(split(_, "\n"))
 input_d7() = readlines("input/day07.txt")
 
+################
+#    Day 8
+################
+ex1_d8() = @pipe """nop +0
+acc +1
+jmp +4
+acc +3
+jmp -3
+acc -99
+acc +1
+jmp -4
+acc +6""" |> String.(split(_, "\n"))
+input_d8() = readlines("input/day08.txt")
+
+
+
 end
