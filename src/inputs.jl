@@ -180,4 +180,55 @@ ex1_d9() = @pipe """35
 576""" |> String.(split(_, "\n")) |> parse.(Int, _)
 input_d9() = parse.(Int, readlines("input/day09.txt"))
 
+################
+#    Day 10
+################
+
+ex0_d10() = @pipe """16
+10
+15
+5
+1
+11
+7
+19
+6
+12
+4""" |> String.(split(_, "\n")) |> parse.(Int, _)
+
+
+ex1_d10() = @pipe """28
+33
+18
+42
+31
+14
+46
+20
+48
+47
+24
+23
+49
+45
+19
+38
+39
+11
+1
+32
+25
+35
+8
+17
+7
+9
+4
+2
+34
+10
+3""" |> String.(split(_, "\n")) |> parse.(Int, _)
+input_d10() = parse.(Int, readlines("input/day10.txt"))
+
+
 end
