@@ -131,7 +131,21 @@ using AdventOfCode2020:day10
     end
 
     @testset "Day 10, Puzzle tests (post hoc)" begin
-    @test day10.part1(day10.input) == 2176
-    @test day10.part2(day10.input) == 18512297918464
+        @test day10.part1(day10.input) == 2176
+        @test day10.part2(day10.input) == 18512297918464
+    end
+end
+
+
+using AdventOfCode2020:day11
+@testset "Day 11" begin
+    @testset "Day 11, Unit tests" begin
+        @test day11.part1(day11.ex) == 37
+        @test day11.part2(day11.ex) == 26
+    end
+
+    @testset "Day 11, Puzzle tests (post hoc)" begin
+        @test day11.part1(day11.input) == 2273
+        @test day11.part2(day11.input) == 2064
     end
 end

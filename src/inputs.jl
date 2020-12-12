@@ -196,7 +196,6 @@ ex0_d10() = @pipe """16
 12
 4""" |> String.(split(_, "\n")) |> parse.(Int, _)
 
-
 ex1_d10() = @pipe """28
 33
 18
@@ -230,5 +229,41 @@ ex1_d10() = @pipe """28
 3""" |> String.(split(_, "\n")) |> parse.(Int, _)
 input_d10() = parse.(Int, readlines("input/day10.txt"))
 
+################
+#    Day 11
+################
+
+ex_d11() = @pipe """L.LL.LL.LL
+LLLLLLL.LL
+L.L.L..L..
+LLLL.LL.LL
+L.LL.LL.LL
+L.LLLLL.LL
+..L.L.....
+LLLLLLLLLL
+L.LLLLLL.L
+L.LLLLL.LL""" |> String.(split(_, "\n"))
+
+ex1_d11() = @pipe """.......#.
+...#.....
+.#.......
+.........
+..#L....#
+....#....
+.........
+#........
+...#.....""" |> String.(split(_, "\n"))
+
+ex2_d11() = @pipe """.##.##.
+#.#.#.#
+##...##
+...L...
+##...##
+#.#.#.#
+.##.##.""" |> String.(split(_, "\n"))
+
+
+
+input_d11() = readlines("input/day11.txt")
 
 end
