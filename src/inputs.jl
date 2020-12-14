@@ -262,8 +262,18 @@ ex2_d11() = @pipe """.##.##.
 #.#.#.#
 .##.##.""" |> String.(split(_, "\n"))
 
-
-
 input_d11() = readlines("input/day11.txt")
+
+################
+#    Day 12
+################
+
+ex_d12() = @pipe """F10
+N3
+F7
+R90
+F11""" |> String.(split(_, "\n"))
+
+input_d12() = readlines("input/day12.txt")
 
 end
