@@ -8,6 +8,7 @@ for day in 1:25
     filename = @sprintf("day_%02d.jl", day)
     path = joinpath(@__DIR__, filename)
     isfile(path) && include(path)
+    isfile(path) && println("Loading file: ", filename)
 end
 
 end
