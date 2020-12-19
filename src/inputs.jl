@@ -286,4 +286,21 @@ ex_d13() = @pipe """939
 input_d13() = @pipe """1000066
 13,x,x,41,x,x,x,37,x,x,x,x,x,659,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,19,x,x,x,23,x,x,x,x,x,29,x,409,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,17""" |> String.(split(_, "\n"))
 
+
+################
+#    Day 15
+################
+
+ex1_d14() = """mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
+mem[8] = 11
+mem[7] = 101
+mem[8] = 0"""
+
+ex2_d14() = """mask = 000000000000000000000000000000X1001X
+mem[42] = 100
+mask = 00000000000000000000000000000000X0XX
+mem[26] = 1"""
+
+input_d14() = read("input/day14.txt", String)
+
 end
