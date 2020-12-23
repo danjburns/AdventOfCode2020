@@ -367,5 +367,23 @@ ex6_d18() = "((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2"
 input_d18() = readlines("input/day18.txt")
 
 
+################
+#    Day 19
+################
+
+ex_d19() = """0: 4 1 5
+1: 2 3 | 3 2
+2: 4 4 | 5 5
+3: 4 5 | 5 4
+4: "a"
+5: "b"
+
+ababbb
+bababa
+abbbab
+aaabbb
+aaaabbb"""
+
+input_d19() = read("input/day19.txt", String)
 
 end
