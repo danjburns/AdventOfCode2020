@@ -1,4 +1,4 @@
-# module day20
+module day20
 
 include("inputs.jl")
 
@@ -52,4 +52,4 @@ apply(f, tile) = f(tile)
 
 
 # parse(Int, reverse(bitstring(6)[end-11:end]), base=2)
-# end
+end
