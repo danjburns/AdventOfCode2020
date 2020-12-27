@@ -502,4 +502,17 @@ Tile 3079:
 input_d20() = read("input/day20.txt", String)
 
 
+################
+#    Day 21
+################
+
+ex_d21() = """mxmxvkd kfcds sqjhc nhms (contains dairy, fish)
+trh fvjkl sbzzf mxmxvkd (contains dairy)
+sqjhc fvjkl (contains soy)
+sqjhc mxmxvkd sbzzf (contains fish)"""
+
+input_d21() = read("input/day21.txt", String)
+
+
+
 end
