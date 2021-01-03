@@ -2,6 +2,19 @@ using Test, Pkg
 
 # no need to change pwd for running tests
 
+using AdventOfCode2020:day25
+@testset "Day 25" begin
+    @testset "Day 25, Unit tests" begin
+        @test day25.part1(day25.ex) == 14897079
+        @test_broken day25.part2(day25.ex) == nothing
+    end
+
+    @testset "Day 24, Puzzle tests (post hoc)" begin
+        @test day25.part1(day25.input) == 4968512
+        @test_broken day25.part2(day25.input) == nothing
+    end
+end
+
 using AdventOfCode2020:day24
 @testset "Day 24" begin
     @testset "Day 24, Unit tests" begin
